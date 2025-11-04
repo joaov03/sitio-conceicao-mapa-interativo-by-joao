@@ -12,7 +12,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-37.360103, -6.985262, -37.335308, -6.971213], map.getSize());
+map.getView().fit([-37.357739, -6.983448, -37.341239, -6.975686], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -1079,22 +1079,11 @@ let measuring = false;
 //layerswitcher
 
 var layerSwitcher = new ol.control.LayerSwitcher({
-    activationMode: 'click',
-	startActive: true,
-	tipLabel: "Layers",
-    target: 'top-right-container',
-	collapseLabel: '»',
-	collapseTipLabel: 'Close'
-    });
+    tipLabel: "Layers",
+    target: 'top-right-container'
+});
 map.addControl(layerSwitcher);
-if (hasTouchScreen || isSmallScreen) {
-	document.addEventListener('DOMContentLoaded', function() {
-		setTimeout(function() {
-			layerSwitcher.hidePanel();
-		}, 500);
-	});	
-}
-
+    
 
 
 

@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:4674").setExtent([-37.360103, -6.985262, -37.335308, -6.971213]);
+//ol.proj.get("EPSG:4674").setExtent([-37.357739, -6.983448, -37.341239, -6.975686]);
 var wms_layers = [];
 
 
@@ -74,13 +74,13 @@ lyr_ImagemOpenStreetMap_0.setVisible(true);lyr_ImagemGoogleSatelite_1.setVisible
 var layersList = [lyr_ImagemOpenStreetMap_0,lyr_ImagemGoogleSatelite_1,lyr_StioConceioPolgonoreaPatosPB_2,lyr_StioConceioLimitePatosPB_3,lyr_StioConceioCoordenadasPatosPB_4];
 lyr_StioConceioPolgonoreaPatosPB_2.set('fieldAliases', {'FID': 'FID', 'Area_M2': 'Area_M2', 'Nome_Sitio': 'Nome_Sitio', 'Municipio': 'Municipio', 'Estado': 'Estado', 'Bairro': 'Bairro', 'CEP': 'CEP', 'Perimetro': 'Perimetro', });
 lyr_StioConceioLimitePatosPB_3.set('fieldAliases', {'Perimetro': 'Perimetro', });
-lyr_StioConceioCoordenadasPatosPB_4.set('fieldAliases', {'Vértices': 'Vértices', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Altitude': 'Altitude', });
+lyr_StioConceioCoordenadasPatosPB_4.set('fieldAliases', {'Vértices': 'Vértices', 'Altitude': 'Altitude', 'LongitudeX': 'LongitudeX', 'LatitudeY': 'LatitudeY', });
 lyr_StioConceioPolgonoreaPatosPB_2.set('fieldImages', {'FID': 'TextEdit', 'Area_M2': 'TextEdit', 'Nome_Sitio': 'TextEdit', 'Municipio': 'TextEdit', 'Estado': 'TextEdit', 'Bairro': 'TextEdit', 'CEP': 'TextEdit', 'Perimetro': 'TextEdit', });
 lyr_StioConceioLimitePatosPB_3.set('fieldImages', {'Perimetro': '', });
-lyr_StioConceioCoordenadasPatosPB_4.set('fieldImages', {'Vértices': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Altitude': 'TextEdit', });
-lyr_StioConceioPolgonoreaPatosPB_2.set('fieldLabels', {'FID': 'no label', 'Area_M2': 'header label - always visible', 'Nome_Sitio': 'header label - always visible', 'Municipio': 'header label - always visible', 'Estado': 'header label - always visible', 'Bairro': 'header label - always visible', 'CEP': 'header label - always visible', 'Perimetro': 'no label', });
+lyr_StioConceioCoordenadasPatosPB_4.set('fieldImages', {'Vértices': 'TextEdit', 'Altitude': 'TextEdit', 'LongitudeX': '', 'LatitudeY': '', });
+lyr_StioConceioPolgonoreaPatosPB_2.set('fieldLabels', {'FID': 'hidden field', 'Area_M2': 'header label - always visible', 'Nome_Sitio': 'header label - always visible', 'Municipio': 'header label - always visible', 'Estado': 'header label - always visible', 'Bairro': 'header label - always visible', 'CEP': 'header label - always visible', 'Perimetro': 'hidden field', });
 lyr_StioConceioLimitePatosPB_3.set('fieldLabels', {'Perimetro': 'header label - always visible', });
-lyr_StioConceioCoordenadasPatosPB_4.set('fieldLabels', {'Vértices': 'header label - always visible', 'Latitude': 'header label - always visible', 'Longitude': 'header label - always visible', 'Altitude': 'header label - always visible', });
+lyr_StioConceioCoordenadasPatosPB_4.set('fieldLabels', {'Vértices': 'header label - always visible', 'Altitude': 'header label - always visible', 'LongitudeX': 'header label - always visible', 'LatitudeY': 'header label - always visible', });
 lyr_StioConceioCoordenadasPatosPB_4.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
